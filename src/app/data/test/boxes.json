@@ -1,0 +1,114 @@
+{
+  "boxes": [
+    {
+      "name": "测试盒 1",
+      "billingStatus": "in-service",
+      "_id": 1,
+      "productInfo": {
+        "rpiSerial": 8135816538706422,
+        "eaBoxVersion": "1.0",
+        "releaseDate": 1467224436970.6116
+      },
+      "workingStatus": "idle"
+    },
+    {
+      "name": "测试盒 2",
+      "billingStatus": "in-service",
+      "_id": 2,
+      "productInfo": {
+        "rpiSerial": 2064583345782011.8,
+        "eaBoxVersion": "1.0",
+        "releaseDate": 1461679264884.9446
+      },
+      "workingStatus": "idle"
+    },
+    {
+      "name": "测试盒 3",
+      "billingStatus": "in-service",
+      "_id": 3,
+      "productInfo": {
+        "rpiSerial": 1018106341361999.5,
+        "eaBoxVersion": "1.0",
+        "releaseDate": 1464557138013.4426
+      },
+      "workingStatus": "idle"
+    },
+    {
+      "name": "测试盒 4",
+      "billingStatus": "in-service",
+      "_id": 4,
+      "productInfo": {
+        "rpiSerial": 3131087254732847,
+        "eaBoxVersion": "1.0",
+        "releaseDate": 1457236825664.8408
+      },
+      "workingStatus": "idle"
+    },
+    {
+      "name": "测试盒 5",
+      "billingStatus": "in-service",
+      "_id": 5,
+      "productInfo": {
+        "rpiSerial": 1782793209422379.8,
+        "eaBoxVersion": "1.0",
+        "releaseDate": 1456525051106.4846
+      },
+      "workingStatus": "idle"
+    },
+    {
+      "name": "测试盒 6",
+      "billingStatus": "in-service",
+      "_id": 6,
+      "productInfo": {
+        "rpiSerial": 8783064601011574,
+        "eaBoxVersion": "1.0",
+        "releaseDate": 1464890397604.381
+      },
+      "workingStatus": "idle"
+    },
+    {
+      "name": "测试盒 7",
+      "billingStatus": "in-service",
+      "_id": 7,
+      "productInfo": {
+        "rpiSerial": 2733001818414777.5,
+        "eaBoxVersion": "1.0",
+        "releaseDate": 1465930687935.1294
+      },
+      "workingStatus": "idle"
+    },
+    {
+      "name": "测试盒 8",
+      "billingStatus": "in-service",
+      "_id": 8,
+      "productInfo": {
+        "rpiSerial": 8891286174766719,
+        "eaBoxVersion": "1.0",
+        "releaseDate": 1468467312350.4263
+      },
+      "workingStatus": "idle"
+    },
+    {
+      "name": "测试盒 9",
+      "billingStatus": "in-service",
+      "_id": 9,
+      "productInfo": {
+        "rpiSerial": 5736738652922213,
+        "eaBoxVersion": "1.0",
+        "releaseDate": 1460998510461.5725
+      },
+      "workingStatus": "idle"
+    },
+    {
+      "name": "测试盒 10",
+      "billingStatus": "in-service",
+      "_id": 10,
+      "productInfo": {
+        "rpiSerial": 4036509804427623.5,
+        "eaBoxVersion": "1.0",
+        "releaseDate": 1465561606795.2825
+      },
+      "workingStatus": "idle"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+.md-headline.mv-20.ml-20 新建测试执行
+
+#create-execution.form-wrapper.md-whiteframe-1dp(flex="60")
+	form(ng-submit="vm.createNewExecution()" name='createExecution')
+		.test-execution-form(layout="column")
+			md-input-container
+				label 测试计划
+				input(ng-model="vm.execution.plan" required)
+			md-input-container
+				label 测试员
+				input(ng-model="vm.execution.tester" required)
+			md-input-container
+				label 测试盒
+				input(ng-model="vm.execution.eaBox" required)
+			md-input-container
+				label 备注
+				input(ng-model="vm.execution.remark")
+			md-button.md-accent.md-raised(type="submit" aria-label="Create Execution" ng-disabled="createExecution.$pristine || createExecution.$invalid") {{vm.buttonContent}}

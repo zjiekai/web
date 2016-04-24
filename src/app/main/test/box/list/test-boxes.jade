@@ -1,0 +1,54 @@
+include ./test-boxes-front-side.partial.jade
+
+mixin box
+  ms-widget-front.h-170.p-16
+    +headline
+    +front-content
+              
+  ms-widget-back.p-16
+    +back-content
+
+mixin back-content
+  .pb-8
+    +in-testing-back
+    +idle-back
+
+mixin in-testing-back
+  div(ng-if='box.currentExecution' layout='column' layout-align='space-between')
+    .mb-5(layout='row', layout-align='space-between center')
+      .remain-steps 剩余 {{ box.currentExecution.totoalSteps - box.currentExecution.completedSteps }} 步
+      .step-remain-time
+        span 当前步骤还要 {{ box.currentExecution.stepEstimateEndTime }}
+      +flip-back
+    .mt-10
+      | 测试流程图
+
+mixin idle-back
+  div(ng-if='!box.currentExecution && box.lastExecution' layout='column' layout-align='space-between')
+    div(layout='row', layout-align='space-between center')
+      .test-plan-name {{ box.lastExecution.testPlan }} 
+      +flip-back
+    .mt-20(layout='row', layout-align='space-between center')
+      .end-time
+        span.label 完成时间
+        span.content {{box.lastExecution.endTime}}
+      .result
+        span.label 结果
+        span.content {{box.lastExecution.result}}
+    .mt-5(layout='row', layout-align='space-between center' ng-if='box.lastExecution.reason')
+      .reason
+        span.label 失败原因
+        span.content {{box.lastExecution.reason}}
+
+mixin flip-back
+  .flip-to-front
+    md-button.md-icon-button(ng-click='flipWidget()', aria-label='Flip widget')
+      md-icon.s16(md-font-icon='icon-close')
+
+
+//- 测试盒列表
+.md-headline.pv-20.pl-20 测试盒列表
+#test-boxes(layout='row', flex='100', layout-wrap='')
+  ms-widget.box.white-bg(flippable='true', layout='column', flex='100', flex-gt-xs='50', flex-gt-md='25' ng-repeat='box in vm.boxes')
+    +box
+

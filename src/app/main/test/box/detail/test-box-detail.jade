@@ -1,0 +1,38 @@
+.md-headline.pl-20.pv-20 测试盒详情
+.summary.ph-20.mt-20.mh-20(layout="row" layout-align="space-between center")
+	span.label.box-name 盒号： {{vm.box.name}}
+
+	span.label.acc-test 累计测试： {{vm.box.executions.length}}
+
+	span.label.last-test 上一次测试： {{vm.box.lastExecution.testPlan.name}}
+
+	span.label.test-result 结果： {{vm.box.lastExecution.result}}
+
+.current-execution.mt-20.mh-20(ng-if="vm.box.currentExecution" layout="row" layout-align="space-between center")
+	span.label.current-state 当前状态：测试中
+
+	span.label.test-plan 测试计划：{{vm.box.currentExecution.testPlan}}
+
+	span.label.tester 测试员：{{vm.box.currentExecution.tester}}
+
+	span.label.estimate-end-time 预计结束：{{vm.box.currentExecution.estimateEndTime}}
+
+.detail-table
+	table.dataTable.hover.row-border(datatable="ng" dt-options="vm.dt-options")
+		thead
+			tr
+				th 测试计划
+				th 测试员
+				th 结果
+				th 开始时间
+				th 结束时间
+				th 总步骤
+
+		tbody
+			tr(ng-repeat="execution in vm.box.executions")
+				td {{execution.testPlan.name}}
+				td {{execution.tester.name}}
+				td {{execution.result}}
+				td {{execution.startTime | dateTimeFull}}
+				td {{execution.endTime | dateTimeFull}}
+				td {{execution.steps}}
